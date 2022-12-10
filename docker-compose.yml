@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    container_name: django_app
+    env_file:
+      - variables.env
+    restart: always
+    ports:
+      - "88:8000"
